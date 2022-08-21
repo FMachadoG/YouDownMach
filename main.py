@@ -4,9 +4,12 @@ import re
 from datetime import timedelta
 import os
 
-########################################
-############# YouDOWNMach ##############
-######################################## 
+######################################################
+##                      YouDownMach                 ##
+#           Execute in terminal and voilà :)        ##
+##      https://github.com/FMachadoG/YouDownMach    ##
+##          By: https://github.com/FMachadoG        ##
+######################################################
 
 link = input(f"Link video: ")
 
@@ -69,7 +72,7 @@ if (downVideo == 'y' or downAudio == 'y'):
             yVideo = yt.streams.get_lowest_resolution()
             yVideoTitle = yVideo.title.replace(".", "_")
 
-            yVideo.download(pathDownload, f'{yVideoTitle}-YouDOWNMach.mp4')
+            yVideo.download(pathDownload, f'{yVideoTitle}-YouDownMach.mp4')
 
             print(f"**Done!")
             
@@ -80,7 +83,7 @@ if (downVideo == 'y' or downAudio == 'y'):
             yVideo = yt.streams.get_highest_resolution()
             yVideoTitle = yVideo.title.replace(".", "_")
 
-            yVideo.download(pathDownload, f'{yVideoTitle}-YouDOWNMach.mp4')
+            yVideo.download(pathDownload, f'{yVideoTitle}-YouDownMach.mp4')
 
             print(f"**Done!")
             
@@ -91,7 +94,7 @@ if (downVideo == 'y' or downAudio == 'y'):
         yAudio = yt.streams.get_audio_only("mp4")
         yAudioTitle = yAudio.title.replace(".", "_")
 
-        yAudio.download(pathDownload, f'{yAudioTitle}-YouDOWNMach.mp3')
+        yAudio.download(pathDownload, f'{yAudioTitle}-YouDownMach.mp3')
 
         print(f"**Done!")
         
